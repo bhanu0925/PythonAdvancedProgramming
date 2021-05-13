@@ -133,6 +133,9 @@ tallest_skyscraper([
 [1, 1, 1, 0],
 [1, 1, 1, 1]
 ]) ➞ 2
+
+
+
 4. A financial institution provides professional services to banks and claims
 charges from the customers based on the number of man-days provided.
 Internally, it has set a scheme to motivate and reward staff to meet and
@@ -157,6 +160,9 @@ Examples
 bonus(15) ➞ 0
 bonus(37) ➞ 1625
 bonus(50) ➞ 8200
+
+
+
 5. A number is said to be Disarium if the sum of its digits raised to their
 respective positions is the number itself.
 Create a function that determines whether a number is a Disarium or not.
