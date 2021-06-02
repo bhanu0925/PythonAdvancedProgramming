@@ -24,6 +24,7 @@ check_score([
 [&quot;X&quot;, &quot;#&quot;, &quot;!!!&quot;],
 [&quot;!!&quot;, &quot;X&quot;, &quot;O&quot;]
 ]) ➞ 0
+
 2. Create a function that takes a variable number of arguments, each
 argument representing the number of items in a group, and returns the
 number of permutations (combinations) of items that you could get by taking
@@ -52,6 +53,7 @@ char_to_dots = {
 &#39;:&#39;: &#39;---...&#39;, &#39;,&#39;: &#39;--..--&#39;, &#39;=&#39;: &#39;-...-&#39;, &#39;!&#39;: &#39;-.-.--&#39;, &#39;.&#39;: &#39;.-.-.-&#39;,
 &#39;-&#39;: &#39;-....-&#39;, &#39;+&#39;: &#39;.-.-.&#39;, &#39;&quot;&#39;: &#39;.-..-.&#39;, &#39;?&#39;: &#39;..--..&#39;, &#39;/&#39;: &#39;-..-.&#39;
 }
+
 4. Write a function that takes a number and returns True if it&#39;s a prime; False
 otherwise. The number can be 2^64-1 (2 to the power of 63, not XOR). With
 the standard technique it would be O(2^64-1), which is much too large for the
@@ -155,6 +157,7 @@ arithmetic_operation(&quot;12 + 12&quot;) ➞ 24 // 12 + 12 = 24
 arithmetic_operation(&quot;12 - 12&quot;) ➞ 24 // 12 - 12 = 0
 arithmetic_operation(&quot;12 * 12&quot;) ➞ 144 // 12 * 12 = 144
 arithmetic_operation(&quot;12 // 0&quot;) ➞ -1 // 12 / 0 = -1
+
 2. Write a function that takes the coordinates of three points in the form of a
 2d array and returns the perimeter of the triangle. The given points are the
 vertices of a triangle on a two-dimensional plane.
@@ -162,6 +165,7 @@ Examples
 perimeter( [ [15, 7], [5, 22], [11, 1] ] ) ➞ 47.08
 perimeter( [ [0, 0], [0, 1], [1, 0] ] ) ➞ 3.42
 perimeter( [ [-10, -10], [10, 10 ], [-10, 10] ] ) ➞ 68.28
+
 3. A city skyline can be represented as a 2-D list with 1s representing
 buildings. In the example below, the height of the tallest building is 4 (second-
 most right column).
@@ -193,8 +197,6 @@ tallest_skyscraper([
 [1, 1, 1, 1]
 ]) ➞ 2
 
-
-
 4. A financial institution provides professional services to banks and claims
 charges from the customers based on the number of man-days provided.
 Internally, it has set a scheme to motivate and reward staff to meet and
@@ -219,7 +221,6 @@ Examples
 bonus(15) ➞ 0
 bonus(37) ➞ 1625
 bonus(50) ➞ 8200
-
 
 
 5. A number is said to be Disarium if the sum of its digits raised to their
@@ -405,6 +406,69 @@ fib(6) ➞ 8
  0 + 1 = 1, 1 + 1 = 2, 1 + 2 = 3, 2 + 3 = 5, 3 + 5 = 8
 fib(1) ➞ 1
 fib(2) ➞ 1
+
+**PythonAdvancedProgramming_7**
+
+1. Create a function that takes a list and returns a new list containing only
+prime numbers.
+Examples
+filter_primes([7, 9, 3, 9, 10, 11, 27]) ➞ [7, 3, 11]
+filter_primes([10007, 1009, 1007, 27, 147, 77, 1001, 70]) ➞ [10007, 1009]
+filter_primes([1009, 10, 10, 10, 3, 33, 9, 4, 1, 61, 63, 69, 1087, 1091, 1093,
+1097]) ➞ [1009, 3, 61, 1087, 1091, 1093, 1097]
+
+2. Once a water balloon pops, is soaks the area around it. The ground gets
+drier the further away you travel from the balloon.
+The effect of a water balloon popping can be modeled using a list. Create a
+function that takes a list which takes the pre-pop state and returns the state
+after the balloon is popped. The pre-pop state will contain at most a single
+balloon, whose size is represented by the only non-zero element.
+Examples
+pop([0, 0, 0, 0, 4, 0, 0, 0, 0]) ➞ [0, 1, 2, 3, 4, 3, 2, 1, 0]
+pop([0, 0, 0, 3, 0, 0, 0]) ➞ [0, 1, 2, 3, 2, 1, 0]
+pop([0, 0, 2, 0, 0]) ➞ [0, 1, 2, 1, 0]
+pop([0]) ➞ [0]
+
+3. &quot;Loves me, loves me not&quot; is a traditional game in which a person plucks off
+all the petals of a flower one by one, saying the phrase &quot;Loves me&quot; and
+&quot;Loves me not&quot; when determining whether the one that they love, loves them
+back.
+Given a number of petals, return a string which repeats the phrases &quot;Loves
+me&quot; and &quot;Loves me not&quot; for every alternating petal, and return the last phrase
+in all caps. Remember to put a comma and space between phrases.
+Examples
+loves_me(3) ➞ &quot;Loves me, Loves me not, LOVES ME&quot;
+loves_me(6) ➞ &quot;Loves me, Loves me not, Loves me, Loves me not, Loves
+me, LOVES ME NOT&quot;
+loves_me(1) ➞ &quot;LOVES ME&quot;
+
+4. Write a function that sorts each string in a list by the letter in alphabetic
+ascending order (a-z).
+Examples
+sort_by_letter([&quot;932c&quot;, &quot;832u32&quot;, &quot;2344b&quot;])
+➞ [&quot;2344b&quot;, &quot;932c&quot;, &quot;832u32&quot;]
+sort_by_letter([&quot;99a&quot;, &quot;78b&quot;, &quot;c2345&quot;, &quot;11d&quot;])
+➞ [&quot;99a&quot;, &quot;78b&quot;, &quot;c2345&quot;, &quot;11d&quot;]
+sort_by_letter([&quot;572z&quot;, &quot;5y5&quot;, &quot;304q2&quot;])
+➞ [&quot;304q2&quot;, &quot;5y5&quot;, &quot;572z&quot;]
+sort_by_letter([])
+➞ []
+
+5. There are three cups on a table, at positions A, B, and C. At the start, there
+is a ball hidden under the cup at position B.
+
+However, I perform several swaps on the cups, which is notated as two
+letters. For example, if I swap the cups at positions A and B, I could notate
+this as AB or BA.
+Create a function that returns the letter position that the ball is at, once I finish
+swapping the cups. The swaps will be given to you as a list.
+
+Example
+cup_swapping([&quot;AB&quot;, &quot;CA&quot;, &quot;AB&quot;]) ➞ &quot;C&quot;
+  Ball begins at position B.
+  Cups A and B swap, so the ball is at position A.
+  Cups C and A swap, so the ball is at position C.
+  Cups A and B swap, but the ball is at position C, so it doesn&#39;t move.
 
 
 **PythonAdvancedProgramming_25**
