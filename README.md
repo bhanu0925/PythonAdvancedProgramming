@@ -474,6 +474,7 @@ Examples
 power_ranger(2, 49, 65) ➞ 2
  2 squares (n^2) lie between 49 and 65, 49 (7^2) and 64 (8^2)
 power_ranger(3, 1, 27) ➞ 3
+
  3 cubes (n^3) lie between 1 and 27, 1 (1^3), 8 (2^3) and 27 (3^3)
 power_ranger(10, 1, 5) ➞ 1
  1 value raised to the 10th power lies between 1 and 5, 1 (1^10)
@@ -489,6 +490,74 @@ rearranged_difference(3320707) ➞ 7709823
  7733200 - 23377 = 7709823
 rearranged_difference(90010) ➞ 90981
  91000 - 19 = 90981
+ 
+ **PythonAdvancedProgramming_8**
+ 
+ 1. Given a sentence as txt, return True if any two adjacent words have this
+property: One word ends with a vowel, while the word immediately after
+begins with a vowel (a e i o u).
+Examples
+vowel_links(&quot;a very large appliance&quot;) ➞ True
+vowel_links(&quot;go to edabit&quot;) ➞ True
+vowel_links(&quot;an open fire&quot;) ➞ False
+vowel_links(&quot;a sudden applause&quot;) ➞ False
+
+
+2. You are given three inputs: a string, one letter, and a second letter.
+Write a function that returns True if every instance of the first letter occurs
+before every instance of the second letter.
+Examples
+first_before_second(&quot;a rabbit jumps joyfully&quot;, &quot;a&quot;, &quot;j&quot;) ➞ True
+ Every instance of &quot;a&quot; occurs before every instance of &quot;j&quot;.
+first_before_second(&quot;knaves knew about waterfalls&quot;, &quot;k&quot;, &quot;w&quot;) ➞ True
+first_before_second(&quot;happy birthday&quot;, &quot;a&quot;, &quot;y&quot;) ➞ False
+ The &quot;a&quot; in &quot;birthday&quot; occurs after the &quot;y&quot; in &quot;happy&quot;.
+first_before_second(&quot;precarious kangaroos&quot;, &quot;k&quot;, &quot;a&quot;) ➞ False
+
+
+3. Create a function that returns the characters from a list or string r on odd or
+even positions, depending on the specifier s. The specifier will be &quot;odd&quot; for
+items on odd positions (1, 3, 5, ...) and &quot;even&quot; for items on even positions (2,
+4, 6, ...).
+Examples
+char_at_pos([2, 4, 6, 8, 10], &quot;even&quot;) ➞ [4, 8]
+ 4 &amp; 8 occupy the 2nd &amp; 4th positions
+char_at_pos(&quot;EDABIT&quot;, &quot;odd&quot;) ➞ &quot;EAI&quot;
+ &quot;E&quot;, &quot;A&quot; and &quot;I&quot; occupy the 1st, 3rd and 5th positions
+
+char_at_pos([&quot;A&quot;, &quot;R&quot;, &quot;B&quot;, &quot;I&quot;, &quot;T&quot;, &quot;R&quot;, &quot;A&quot;, &quot;R&quot;, &quot;I&quot;, &quot;L&quot;, &quot;Y&quot;], &quot;odd&quot;) ➞ [&quot;A&quot;,
+&quot;B&quot;, &quot;T&quot;, &quot;A&quot;, &quot;I&quot;, &quot;Y&quot;]
+
+
+4. Write a function that returns the greatest common divisor of all list
+elements. If the greatest common divisor is 1, return 1.
+Examples
+GCD([10, 20, 40]) ➞ 10
+GCD([1, 2, 3, 100]) ➞ 1
+GCD([1024, 192, 2048, 512]) ➞ 64
+
+
+5. A number/string is a palindrome if the digits/characters are the same when
+read both forward and backward. Examples include &quot;racecar&quot; and 12321.
+Given a positive number n, check if n or the binary representation of n is
+palindromic. Return the following:
+- &quot;Decimal only.&quot; if only n is a palindrome.
+- &quot;Binary only.&quot; if only the binary representation of n is a palindrome.
+- &quot;Decimal and binary.&quot; if both are palindromes.
+- &quot;Neither!&quot; if neither are palindromes.
+Examples
+palindrome_type(1306031) ➞ &quot;Decimal only.&quot;
+ decimal = 1306031
+ binary = &quot;100111110110110101111&quot;
+palindrome_type(427787) ➞ &quot;Binary only.&quot;
+ decimal = 427787
+ binary = &quot;1101000011100001011&quot;
+palindrome_type(313) ➞ &quot;Decimal and binary.&quot;
+ decimal = 313
+ binary = 100111001
+palindrome_type(934) ➞ &quot;Neither!&quot;
+ decimal = 934
+ binary = &quot;1110100110&quot;
 
 
 **PythonAdvancedProgramming_11**
@@ -553,6 +622,77 @@ cup_swapping([&quot;AB&quot;, &quot;CA&quot;, &quot;AB&quot;]) ➞ &quot;C&quot;
   Cups A and B swap, so the ball is at position A.
   Cups C and A swap, so the ball is at position C.
   Cups A and B swap, but the ball is at position C, so it doesn&#39;t move.
+  
+  **PythonAdvancedProgramming_12**
+  
+  1. For this challenge, forget how to add two numbers together. The best
+explanation on what to do for this function is this meme:
+
+Examples
+meme_sum(26, 39) ➞ 515
+ 2+3 = 5, 6+9 = 15
+ 26 + 39 = 515
+meme_sum(122, 81) ➞ 1103
+ 1+0 = 1, 2+8 = 10, 2+1 = 3
+ 122 + 81 = 1103
+meme_sum(1222, 30277) ➞ 31499
+
+2. Given an integer, create a function that returns the next prime. If the
+number is prime, return the number itself.
+Examples
+
+next_prime(12) ➞ 13
+next_prime(24) ➞ 29
+next_prime(11) ➞ 11
+ 11 is a prime, so we return the number itself.
+ 
+ 
+3. If a person traveled up a hill for 18mins at 20mph and then traveled back
+down the same path at 60mph then their average speed traveled was 30mph.
+Write a function that returns the average speed traveled given an uphill time,
+uphill rate and a downhill rate. Uphill time is given in minutes. Return the rate
+as an integer (mph). No rounding is necessary.
+Examples
+ave_spd(18, 20, 60) ➞ 30
+ave_spd(30, 10, 30) ➞ 15
+ave_spd(30, 8, 24) ➞ 
+
+
+4. The Kempner Function, applied to a composite number, permits to find the
+smallest integer greater than zero whose factorial is exactly divided by the
+number.
+kempner(6) ➞ 3
+1! = 1 % 6 &gt; 0
+2! = 2 % 6 &gt; 0
+3! = 6 % 6 === 0
+kempner(10) ➞ 5
+1! = 1 % 10 &gt; 0
+2! = 2 % 10 &gt; 0
+3! = 6 % 10 &gt; 0
+4! = 24 % 10 &gt; 0
+5! = 120 % 10 === 0
+A Kempner Function applied to a prime will always return the prime itself.
+kempner(2) ➞ 2
+kempner(5) ➞ 5
+
+Given an integer n, implement a Kempner Function.
+Examples
+kempner(6) ➞ 3
+kempner(10) ➞ 5
+kempner(2) ➞ 2
+
+
+5. You work in a factory, and your job is to take items from a conveyor belt
+and pack them into boxes. Each box can hold a maximum of 10 kgs. Given a
+list containing the weight (in kg) of each item, how many boxes would you
+need to pack all of the items?
+Example
+boxes([2, 1, 2, 5, 4, 3, 6, 1, 1, 9, 3, 2]) ➞ 5
+ Box 1 = [2, 1, 2, 5] (10kg)
+ Box 2 = [4, 3] (7kg)
+ Box 3 = [6, 1, 1] (8kg)
+ Box 4 = [9] (9kg)
+ Box 5 = [3, 2] (5kg)
 
 
 **PythonAdvancedProgramming_25**
