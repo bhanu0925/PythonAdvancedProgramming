@@ -616,6 +616,87 @@ negative_sum(&quot;-12 13%14&amp;-11&quot;) ➞ -23
  -12 + -11 = -23
 negative_sum(&quot;22 13%14&amp;-11-22 13 12&quot;) ➞ -33
  -11 + -22 = -33
+ 
+ **PythonAdvanceProgramming_10**
+ 
+ 1. Create a function that takes the width, height and character and returns a
+picture frame as a 2D list.
+Examples
+get_frame(4, 5, &quot;#&quot;) ➞ [
+[&quot;####&quot;],
+[&quot;# #&quot;],
+[&quot;# #&quot;],
+[&quot;# #&quot;],
+[&quot;####&quot;]
+]
+ Frame is 4 characters wide and 5 characters tall.
+
+get_frame(10, 3, &quot;*&quot;) ➞ [
+[&quot;**********&quot;],
+[&quot;* *&quot;],
+[&quot;**********&quot;]
+]
+ Frame is 10 characters and wide and 3 characters tall.
+
+get_frame(2, 5, &quot;0&quot;) ➞ &quot;invalid&quot;
+ Frame&#39;s width is not more than 2.
+ 
+ 
+2. Write three functions:
+1. boolean_and
+2. boolean_or
+3. boolean_xor
+These functions should evaluate a list of True and False values, starting from
+the leftmost element and evaluating pairwise.
+Examples
+boolean_and([True, True, False, True]) ➞ False
+ [True, True, False, True] =&gt; [True, False, True] =&gt; [False, True] =&gt; False
+boolean_or([True, True, False, False]) ➞ True
+ [True, True, False, True] =&gt; [True, False, False] =&gt; [True, False] =&gt; True
+boolean_xor([True, True, False, False]) ➞ False
+ [True, True, False, False] =&gt; [False, False, False] =&gt; [False, False] =&gt;
+False
+
+3. Create a function that creates a box based on dimension n.
+Examples
+make_box(5) ➞ [
+&quot;#####&quot;,
+&quot;# #&quot;,
+&quot;# #&quot;,
+&quot;# #&quot;,
+&quot;#####&quot;
+]
+make_box(3) ➞ [
+&quot;###&quot;,
+&quot;# #&quot;,
+&quot;###&quot;
+]
+make_box(2) ➞ [
+&quot;##&quot;,
+&quot;##&quot;
+]
+make_box(1) ➞ [
+&quot;#&quot;
+]
+
+
+4. Given a common phrase, return False if any individual word in the phrase
+contains duplicate letters. Return True otherwise.
+Examples
+no_duplicate_letters(&quot;Fortune favours the bold.&quot;) ➞ True
+no_duplicate_letters(&quot;You can lead a horse to water, but you can&#39;t make him
+drink.&quot;) ➞ True
+no_duplicate_letters(&quot;Look before you leap.&quot;) ➞ False
+Duplicate letters in &quot;Look&quot; and &quot;before&quot;.
+no_duplicate_letters(&quot;An apple a day keeps the doctor away.&quot;) ➞ False
+Duplicate letters in &quot;apple&quot;, &quot;keeps&quot;, &quot;doctor&quot;, and &quot;away&quot;.
+
+5. Write a regular expression that will match the states that voted yes to
+President Trump&#39;s impeachment. You must use RegEx positive lookahead.
+Example
+txt = &quot;Texas = no, California = yes, Florida = yes, Michigan = no&quot;
+pattern = &quot;yourregularexpressionhere&quot;
+re.findall(pattern, txt) ➞ [&quot;California&quot;, &quot;Florida&quot;]
 
 
 **PythonAdvancedProgramming_11**
