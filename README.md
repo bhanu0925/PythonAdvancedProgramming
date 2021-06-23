@@ -833,7 +833,7 @@ boxes([2, 1, 2, 5, 4, 3, 6, 1, 1, 9, 3, 2]) ➞ 5
  Box 4 = [9] (9kg)
  Box 5 = [3, 2] (5kg)
  
-**PythonAdvancedProgramming_13
+**PythonAdvancedProgramming_13**
 
 1. Create a function that takes a list and string. The function should remove
 the letters in the string from the list, and return the list.
@@ -885,6 +885,60 @@ flip_list([[5], [6], [9]]) ➞ [5, 6, 9]
  Take a vertical list and flip it horizontal.
 flip_list([]) ➞ []
 
+**PythonAdvancedProgramming_14**
+
+1. Given a list of numbers, create a function that removes 25% from every
+number in the list except the smallest number, and adds the total amount
+removed to the smallest number.
+Examples
+show_the_love([4, 1, 4]) ➞ [3, 3, 3]
+show_the_love([16, 10, 8]) ➞ [12, 7.5, 14.5]
+show_the_love([2, 100]) ➞ [27, 75]
+
+2. Create a function that takes in two words as input and returns a list of three
+elements, in the following order:
+1.Shared letters between two words.
+2.Letters unique to word 1.
+3.Letters unique to word 2.
+Each element should have unique letters, and have each letter be
+alphabetically sorted.
+Examples
+letters(&quot;sharp&quot;, &quot;soap&quot;) ➞ [&quot;aps&quot;, &quot;hr&quot;, &quot;o&quot;]
+letters(&quot;board&quot;, &quot;bored&quot;) ➞ [&quot;bdor&quot;, &quot;a&quot;, &quot;e&quot;]
+letters(&quot;happiness&quot;, &quot;envelope&quot;) ➞ [&quot;enp&quot;, &quot;ahis&quot;, &quot;lov&quot;]
+letters(&quot;kerfuffle&quot;, &quot;fluffy&quot;) ➞ [&quot;flu&quot;, &quot;ekr&quot;, &quot;y&quot;]
+ Even with multiple matching letters (e.g. 3 f&#39;s), there should
+ only exist a single &quot;f&quot; in your first element.
+letters(&quot;match&quot;, &quot;ham&quot;) ➞ [&quot;ahm&quot;, &quot;ct&quot;, &quot;&quot;]
+ &quot;ham&quot; does not contain any letters that are not found already
+ in &quot;match&quot;.
+
+3. Write a function that pairs the first number in an array with the last, the
+second number with the second to last, etc.
+Examples
+pairs([1, 2, 3, 4, 5, 6, 7]) ➞ [[1, 7], [2, 6], [3, 5], [4, 4]]
+
+pairs([1, 2, 3, 4, 5, 6]) ➞ [[1, 6], [2, 5], [3, 4]]
+pairs([5, 9, 8, 1, 2]) ➞ [[5, 2], [9, 1], [8, 8]]
+pairs([]) ➞ []
+
+4. Write a function that adds two numbers. The catch, however, is that the
+numbers will be strings.
+Examples
+add_str_nums(&quot;4&quot;, &quot;5&quot;) ➞ &quot;9&quot;
+add_str_nums(&quot;abcdefg&quot;, &quot;3&quot;) ➞ &quot;-1&quot;
+add_str_nums(&quot;1&quot;, &quot;&quot;) ➞ &quot;1&quot;
+add_str_nums(&quot;1874682736267235927359283579235789257&quot;,
+&quot;32652983572985729&quot;) ➞ &quot;1874682736267235927391936562808774986&quot;
+
+5. lPaeesh le pemu mnxit ehess rtnisg! Oh, sorry, that was supposed to say:
+Please help me unmix these strings!
+Somehow my strings have all become mixed up; every pair of characters has
+been swapped. Help me undo this so I can understand my strings again.
+Examples
+unmix(&quot;123456&quot;) ➞ &quot;214365&quot;
+unmix(&quot;hTsii s aimex dpus rtni.g&quot;) ➞ &quot;This is a mixed up string.&quot;
+unmix(&quot;badce&quot;) ➞ &quot;abcde&quot;
 
 
 **PythonAdvancedProgramming_25**
