@@ -940,6 +940,78 @@ unmix(&quot;123456&quot;) ➞ &quot;214365&quot;
 unmix(&quot;hTsii s aimex dpus rtni.g&quot;) ➞ &quot;This is a mixed up string.&quot;
 unmix(&quot;badce&quot;) ➞ &quot;abcde&quot;
 
+**PythonAdvancedProgramming_15**
+
+1. Write a function that returns True if a given name can generate an array of
+words.
+Examples
+anagram(&quot;Justin Bieber&quot;, [&quot;injures&quot;, &quot;ebb&quot;, &quot;it&quot;]) ➞ True
+anagram(&quot;Natalie Portman&quot;, [&quot;ornamental&quot;, &quot;pita&quot;]) ➞ True
+anagram(&quot;Chris Pratt&quot;, [&quot;chirps&quot;, &quot;rat&quot;]) ➞ False
+ Not all letters are used
+anagram(&quot;Jeff Goldblum&quot;, [&quot;jog&quot;, &quot;meld&quot;, &quot;bluffs&quot;]) ➞ False
+&quot;s&quot; does not exist in the original name
+
+2. Given an array of users, each defined by an object with the following
+properties: name, score, reputation create a function that sorts the array to
+form the correct leaderboard.
+The leaderboard takes into consideration the score of each user of course,
+but an emphasis is put on their reputation in the community, so to get the
+trueScore, you should add the reputation multiplied by 2 to the score.
+Once you know the trueScore of each user, sort the array according to it in
+descending order.
+Examples
+leaderboards([
+{ &quot;name&quot;: &quot;a&quot;, &quot;score&quot;: 100, &quot;reputation&quot;: 20 },
+{ &quot;name&quot;: &quot;b&quot;, &quot;score&quot;: 90, &quot;reputation&quot;: 40 },
+{ &quot;name&quot;: &quot;c&quot;, &quot;score&quot;: 115, &quot;reputation&quot;: 30 },
+]) ➞ [
+{ &quot;name&quot;: &quot;c&quot;, &quot;score&quot;: 115, &quot;reputation&quot;: 30 }, # trueScore = 175
+{ &quot;name&quot;: &quot;b&quot;, &quot;score&quot;: 90, &quot;reputation&quot;: 40 }, # trueScore = 170
+{ &quot;name&quot;: &quot;a&quot;, &quot;score&quot;: 100, &quot;reputation&quot;: 20 } # trueScore = 140
+]
+
+3. Create a function that, given a phrase and a number of letters guessed,
+returns a string with hyphens - for every letter of the phrase not guessed, and
+each letter guessed in place.
+Examples
+hangman(&quot;helicopter&quot;, [&quot;o&quot;, &quot;e&quot;, &quot;s&quot;]) ➞ &quot;-e---o--e-&quot;
+
+hangman(&quot;tree&quot;, [&quot;r&quot;, &quot;t&quot;, &quot;e&quot;]) ➞ &quot;tree&quot;
+hangman(&quot;Python rules&quot;, [&quot;a&quot;, &quot;n&quot;, &quot;p&quot;, &quot;r&quot;, &quot;z&quot;]) ➞ &quot;P----n r----&quot;
+hangman(&quot;He&quot;s a very naughty boy!&quot;, [&quot;e&quot;, &quot;a&quot;, &quot;y&quot;]) ➞ &quot;-e&quot;- a -e-y -a----y –y!&quot;
+
+4. The Collatz sequence is as follows:
+- Start with some given integer n.
+- If it is even, the next number will be n divided by 2.
+- If it is odd, multiply it by 3 and add 1 to make the next number.
+- The sequence stops when it reaches 1.
+According to the Collatz conjecture, it will always reach 1. If that&#39;s true, you
+can construct a finite sequence following the aforementioned method for any
+given integer.
+Write a function that takes in an integer n and returns the highest integer in
+the corresponding Collatz sequence.
+Examples
+max_collatz(10) ➞ 16
+ Collatz sequence: 10, 5, 16, 8, 4, 2, 1
+max_collatz(32) ➞ 32
+ Collatz sequence: 32, 16, 8, 4, 2, 1
+max_collatz(85) ➞ 256
+ Collatz sequence: 85, 256, 128, 64, 32, 16, 8, 4, 2, 1
+ 
+5. Write a function that sorts a list of integers by their digit length in
+descending order, then settles ties by sorting numbers with the same digit
+length in ascending order.
+Examples
+digit_sort([77, 23, 5, 7, 101])
+➞ [101, 23, 77, 5, 7]
+digit_sort([1, 5, 9, 2, 789, 563, 444])
+➞ [444, 563, 789, 1, 2, 5, 9]
+digit_sort([53219, 3772, 564, 32, 1])
+
+➞ [53219, 3772, 564, 32, 1]
+
+
 **PythonAdvancedProgramming_24**
 
 1. Write a function that returns True if a given name can generate an array of
