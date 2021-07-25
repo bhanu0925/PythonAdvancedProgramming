@@ -1011,6 +1011,75 @@ digit_sort([53219, 3772, 564, 32, 1])
 
 ➞ [53219, 3772, 564, 32, 1]
 
+**PythonAdvancedProgramming_16**
+
+1. Rondo Form is a type of musical structure, in which there is a recurring
+theme/refrain, notated as A. Here are the rules for valid rondo forms:
+- Rondo forms always start and end with an A section.
+- In between the A sections, there should be contrasting sections notated as
+B, then C, then D, etc... No letter should be skipped.
+- There shouldn&#39;t be any repeats in the sequence (such as ABBACCA).
+Create a function which validates whether a given string is a valid Rondo
+Form.
+Examples
+valid_rondo(&quot;ABACADAEAFAGAHAIAJA&quot;) ➞ True
+valid_rondo(&quot;ABA&quot;) ➞ True
+valid_rondo(&quot;ABBACCA&quot;) ➞ False
+valid_rondo(&quot;ACAC&quot;) ➞ False
+valid_rondo(&quot;A&quot;) ➞ False
+
+
+2. Create a function that returns the whole of the first sentence which
+contains a specific word. Include the full stop at the end of the sentence.
+Examples
+txt = &quot;I have a cat. I have a mat. Things are going swell.&quot;
+sentence_searcher(txt, &quot;have&quot;) ➞ &quot;I have a cat.&quot;
+sentence_searcher(txt, &quot;MAT&quot;) ➞ &quot;I have a mat.&quot;
+sentence_searcher(txt, &quot;things&quot;) ➞ &quot;Things are going swell.&quot;
+sentence_searcher(txt, &quot;flat&quot;) ➞ &quot;&quot;
+
+
+3. Given a number, find the &quot;round &quot;of each digit of the number. An integer is
+called &quot;round&quot; if all its digits except the leftmost (most significant) are equal to
+zero.
+- Round numbers: 4000, 1, 9, 800, 90
+- Not round numbers: 110, 707, 222, 1001
+
+Create a function that takes a number and returns the &quot;round&quot; of each digit
+(except if the digit is zero) as a string. Check out the following examples for
+more clarification.
+Examples
+sum_round(101) ➞ &quot;1 100&quot;
+sum_round(1234) ➞ &quot;4 30 200 1000&quot;
+sum_round(54210) ➞ &quot;10 200 4000 50000&quot;
+
+4. Your task, is to create N x N multiplication table, of size n provided in
+parameter.
+For example, when n is 5, the multiplication table is:
+- 1, 2, 3, 4, 5
+- 2, 4, 6, 8, 10
+- 3, 6, 9, 12, 15
+- 4, 8, 12, 16, 20
+- 5, 10, 15, 20, 25
+This example will result in:
+[[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3, 6, 9, 12, 15], [4, 8, 12, 16, 20], [5, 10, 15, 20,
+25]]
+Examples
+multiplication_table(1) ➞ [[1]]
+multiplication_table(3) ➞ [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
+
+5. Create a function that returns True if two lines rhyme and False otherwise.
+For the purposes of this exercise, two lines rhyme if the last word from each
+sentence contains the same vowels.
+Examples
+does_rhyme(&quot;Sam I am!&quot;, &quot;Green eggs and ham.&quot;) ➞ True
+does_rhyme(&quot;Sam I am!&quot;, &quot;Green eggs and HAM.&quot;) ➞ True
+Capitalization and punctuation should not matter.
+
+does_rhyme(&quot;You are off to the races&quot;, &quot;a splendid day.&quot;) ➞ False
+does_rhyme(&quot;and frequently do?&quot;, &quot;you gotta move.&quot;) ➞ False
+
+
 
 **PythonAdvancedProgramming_24**
 
